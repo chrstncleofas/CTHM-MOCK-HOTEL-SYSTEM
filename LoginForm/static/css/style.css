@@ -1,0 +1,12 @@
+.summary{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.summary > h1{
+    padding: 300px;
+}
+
+/* .d-flex > .navbar-nav{
+    margin-right: 50px;
+} */
