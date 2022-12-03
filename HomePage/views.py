@@ -17,3 +17,6 @@ def listroom(request):
 def gallery(request):
     return render(request, 'HomePage/gallery.html')
 
+def addroom(request):
+    return render(request, 'HomePage/roomAdd.html')
+
