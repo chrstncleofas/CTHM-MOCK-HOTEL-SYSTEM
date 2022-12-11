@@ -1,0 +1,21 @@
+.gallery{
+    margin: 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.4rem;
+}
+.gallery .cards{
+    color: #333333;
+    background-color: #ffffff;
+    padding: 2.4rem 1rem;
+    transition: all.4s;
+}
+.cards img{
+    width: 100%;
+    height: 450px;
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 400px;
+}
