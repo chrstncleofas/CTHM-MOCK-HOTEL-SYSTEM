@@ -1,21 +1,41 @@
-.gallery{
+:root {
+    --first-color: #eaeaea;
+    --second-color: #d48b68;
+    --third-color: #a66bbe;
+    --fourth-color: #9a3ebe;
+    --fifth-color: #d36efc;
+    --other-color: #ec2c2c;
+    --light-color: #d97aff;
+    --content-color: #333;
+    --shadow: 0 1px 5px #ff7e7e;
+    --media: 0 1px 5px #b8b8b8;
+}
+.gallery-content{
+    padding: 15px 0;
+    margin-bottom: 90px;
+}
+.container-services{
     margin: 1.5rem 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.4rem;
 }
-.gallery .cards{
+.container-services .cards-c{
     color: #333333;
     background-color: #ffffff;
     padding: 2.4rem 1rem;
     transition: all.4s;
-}
-.cards img{
-    width: 100%;
-    height: 450px;
+    box-shadow: var(--shadow);
 }
 
-.carousel-inner img{
+.gallery-content .container-services .cloud-plat {
+    margin-top: 40px;
+    color: var(--other-color);
+    text-align: center;
+    font-size: 35px;
+}
+
+.cards-c img{
     width: 100%;
-    height: 400px;
+    height: 360px;
 }
