@@ -20,3 +20,9 @@ def gallery(request):
 def addroom(request):
     return render(request, 'HomePage/roomAdd.html')
 
+def bookPage(request):
+    return render(request, 'HomePage/bookPage.html')
+
+def contact(request):
+    return render(request, 'HomePage/contact.html')
+

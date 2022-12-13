@@ -35,30 +35,30 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">Features</a>
+              aria-expanded="false">Branches</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'addroom' %}">Room Section</a>
-              <a class="dropdown-item" href="#">Reports</a>
+              <a class="dropdown-item" href="{% url 'addroom' %}">Iba Main Campus</a>
+              <a class="dropdown-item" href="#">Not Available</a>
               <a class="dropdown-item" href="#">Not Available</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Not Available</a>
             </div>
           </li>
           <li>
-            <a href="{% url 'gallery' %}" class="nav-link px-2 text-white">Gallery</a>
+            <a href="{% url 'listroom' %}" class="nav-link px-2 text-white">Rooms</a>
           </li>
           <li>
-            <a href="{% url 'listroom' %}" class="nav-link px-2 text-white">Rooms</a>
+            <a href="{% url 'contact' %}" class="nav-link px-2 text-white">Contact Us</a>
           </li>
         </ul>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">
-            <a href="{% url 'login' %}" style="text-decoration: none; color: white">Login</a>
+          <button type="button" class="btn btn-outline-secondary me-2">
+            <a href="{% url 'bookPage' %}" style="text-decoration: none; color: white;">Book Now!</a>
           </button>
-          <button type="button" class="btn btn-secondary text-white">
-            <a href="{% url 'register' %}" style="text-decoration: none; color: white">Sign Up</a>
-          </button>
+          <!-- <button type="button" class="btn btn-secondary text-white">
+            <a href="#" style="text-decoration: none; color: white">Sign Up</a>
+          </button> -->
         </div>
       </div>
     </div>
