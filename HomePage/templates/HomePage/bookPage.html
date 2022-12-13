@@ -1,12 +1,289 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book and Reservation Page</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+    <link rel="stylesheet" id="roboto-subset.css-css"
+        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5"
+        type="text/css" media="all">
+    <link rel="canonical" href="https://mdbootstrap.com/docs/standard/extended/registration/">
+    <style>
+        INPUT:-webkit-autofill,
+        SELECT:-webkit-autofill,
+        TEXTAREA:-webkit-autofill {
+            animation-name: onautofillstart
+        }
+
+        INPUT:not(:-webkit-autofill),
+        SELECT:not(:-webkit-autofill),
+        TEXTAREA:not(:-webkit-autofill) {
+            animation-name: onautofillcancel
+        }
+
+        @keyframes onautofillstart {}
+
+        @keyframes onautofillcancel {}
+    </style>
+    <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/js?id=G-E9PS2EVWYS&amp;l=dataLayer&amp;cx=c"></script>
+
+
+    <title>Book and Reservation</title>
 </head>
+
 <body>
-    <h1>Book Page</h1>
+    <!-- Navigation -->
+  <header class="p-3 bg-primary text-white" style="background-color: maroon !important;">
+    <div class="container-fluid">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li>
+            <a href="{% url 'home' %}" class="nav-link px-2 text-secondary">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Branches</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Iba Main Campus</a>
+              <a class="dropdown-item" href="#">Not Available</a>
+              <a class="dropdown-item" href="#">Not Available</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Not Available</a>
+            </div>
+          </li>
+          <li>
+            <a href="{% url 'accomodation' %}" class="nav-link px-2 text-white">Rooms</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}" class="nav-link px-2 text-white">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+    <div class="bg-white rounded-5 container mt-4">
+        <section class="w-100 px-4 py-5 gradient-custom" style="border-radius: .5rem .5rem 0 0;">
+            <style>
+                .card-registration .select-input.form-control[readonly]:not([disabled]) {
+                    font-size: 1rem;
+                    line-height: 2.15;
+                    padding-left: .75em;
+                    padding-right: .75em;
+                }
+
+                .card-registration .select-arrow {
+                    top: 13px;
+                }
+            </style>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9 col-xl-9">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Reservation Form</h3>
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="firstName" class="form-control form-control-lg">
+                                            <label class="form-label" for="firstName" style="margin-left: 0px;">First
+                                                Name</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 70.4px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="lastName" class="form-control form-control-lg">
+                                            <label class="form-label" for="lastName" style="margin-left: 0px;">Last
+                                                Name</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 69.6px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="address" class="form-control form-control-lg">
+                                            <label class="form-label" for="lastName" style="margin-left: 0px;">Address</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 69.6px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="city" class="form-control form-control-lg">
+                                            <label class="form-label" for="firstName" style="margin-left: 0px;">City</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 70.4px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="province" class="form-control form-control-lg">
+                                            <label class="form-label" for="lastName" style="margin-left: 0px;">Province</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 69.6px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="postal" class="form-control form-control-lg">
+                                            <label class="form-label" for="lastName" style="margin-left: 0px;">Postal / Zip code</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 69.6px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                        <div class="form-outline datepicker w-100">
+                                            <input type="text" class="form-control form-control-lg" id="birthdayDate">
+                                            <label for="birthdayDate" class="form-label"
+                                                style="margin-left: 0px;">Birthday</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <h6 class="mb-2 pb-1">Gender: </h6>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="femaleGender" value="option1" checked="">
+                                            <label class="form-check-label" for="femaleGender">Female</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="maleGender" value="option2">
+                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="otherGender" value="option3">
+                                            <label class="form-check-label" for="otherGender">Other</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <input type="email" id="emailAddress" class="form-control form-control-lg">
+                                            <label class="form-label" for="emailAddress"
+                                                style="margin-left: 0px;">Email</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 40px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg">
+                                            <label class="form-label" for="phoneNumber" style="margin-left: 0px;">Phone
+                                                Number</label>
+                                            <div class="form-notch">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 92.8px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+
+                                        <div id="select-wrapper-771349" class="select-wrapper">
+                                            <div class="form-outline"><input class="form-control select-input active"
+                                                    type="text" role="listbox" aria-multiselectable="false"
+                                                    aria-disabled="false" aria-haspopup="true" aria-expanded="false"
+                                                    readonly="true"><label class="form-label select-label active"
+                                                    style="margin-left: 0px;">Choose option</label><span
+                                                    class="select-arrow"></span>
+                                                <div class="form-notch">
+                                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                                    <div class="form-notch-middle" style="width: 90.4px;"></div>
+                                                    <div class="form-notch-trailing"></div>
+                                                </div>
+                                                <div class="form-label select-fake-value">Subject 1</div>
+                                            </div><select class="select form-control-lg select-initialized">
+                                                <option value="1" disabled="">Choose option</option>
+                                                <option value="2">Subject 1</option>
+                                                <option value="3">Subject 2</option>
+                                                <option value="4">Subject 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-2">
+                                    <input class="btn btn-primary btn-lg" type="submit" value="Submit" style="background-color: maroon !important;">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
