@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/" />
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.all.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/accomodation.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.all.css' %}" />
     <title>Contact Page</title>
 </head>
 <body>
@@ -45,6 +54,73 @@
           </div>
         </div>
     </header>
+    <!-- Showcase -->
+  <div class="mag">
+    <div id="myCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img width="100%" height="750px" class="show-case-image" src="{% static  'img/Home.jpg' %}" alt="" />
+  
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Accomodation</h1>
+              <p>
+                Some representative placeholder content for the first slide of
+                the carousel.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img width="100%" height="750px" class="show-case-image" src="{% static  'img/Frontdesk.jpg' %}" alt="" />
+  
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Accomodation.</h1>
+              <p>
+                Some representative placeholder content for the second slide of
+                the carousel.
+              </p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img width="100%" height="750px" class="show-case-image" src="{% static  'img/Room2.jpg' %}" alt="" />
+  
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Accomodation</h1>
+              <p>
+                Some representative placeholder content for the third slide of
+                this carousel.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
     <!-- Contact Form -->
     <section id="contact">
         <!-- <h2>For more Info Please Fill up Below</h2> -->
@@ -117,5 +193,17 @@
       </span>
     </div>
   </footer>
+   <!-- AOS Script -->
+  <!-- link ng js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="% static  'js/bootstrap.min.js' %}"></script>
+  <script src="{% static  'js/aos.js' %}"></script>
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1000,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

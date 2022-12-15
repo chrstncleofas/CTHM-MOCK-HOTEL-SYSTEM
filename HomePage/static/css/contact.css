@@ -299,7 +299,6 @@ img {
 #contact {
     background-color: var(--thirdy-color);
     margin-bottom: -40px;
-    margin-top: 80px;
 }
 
 #contact .contact-box>h2 {
@@ -436,6 +435,11 @@ img {
     margin-top: 100px !important;
 }
 
+/* Caro */
+
+.mag{
+    margin-top: 400px;
+}
 /*********************************************************************************/
 
 /* For Media Queries Mobile Responsive Styling                                   */
