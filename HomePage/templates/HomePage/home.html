@@ -3,23 +3,20 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/" />
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/" />
-  <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  <!-- <link rel="stylesheet" href="{% static 'css/contact.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <!--  -->
   <title>CTHM Mock Hotel Reservation System</title>
 </head>
 
 <body>
+
   <!-- Navigation -->
   <header class="p-3 bg-primary text-white">
     <div class="container-fluid">
@@ -48,10 +45,10 @@
             <a href="{% url 'accomodation' %}" class="nav-link px-2 text-white">Rooms</a>
           </li>
           <li>
-            <a href="{% url 'contact' %}" class="nav-link px-2 text-white">Contact Us</a>
+            <!-- <a href="{% url 'contact' %}" class="nav-link px-2 text-white">Contact Us</a> -->
+            <a href="#contact" class="nav-link px-2 text-white">Contact Us</a>
           </li>
         </ul>
-
         <div class="text-end">
           <button type="button" class="btn btn-outline-secondary me-2">
             <a href="{% url 'bookPage' %}" style="text-decoration: none; color: white;">Book Now!</a>
@@ -63,10 +60,12 @@
       </div>
     </div>
   </header>
+
   <!-- Carousel wrapper -->
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"
+        aria-current="true"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
     </div>
@@ -114,68 +113,10 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!-- Carousel wrapper -->
-  <!-- Check in Check out Form -->
-  <!-- <form action="">
-    <div class="container mt-4">
-      <div class="row" style="padding: 18px">
-        <div class="col-md-4">
-          <label>Check-in</label>
-          <input type="date" class="form-control" name="date_from" min="2022-12-10" />
-        </div>
-        <div class="col-md-4">
-          <label>Check-out</label>
-          <input type="date" class="form-control" name="date_to" />
-        </div>
-        <div class="col-md-4">
-          <label>Select Room</label>
-          <select class="form-control" name="room" id="roomSelect">
-            <option selected="" disabled="">Select a room</option>
-            <option>Basic</option>
-            <option>Deluxe</option>
-          </select>
-        </div>
 
-      </div>
-      <div class="row" style="padding: 18px">
-        <div class="col-md-4">
-          <label>Faculty</label>
-          <select class="form-control" name="children">
-            <option selected="" disabled="">(# of Faculty)</option>
-            <option>1</option>
-            <option>2</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label>Visitor</label>
-          <select class="form-control" name="children">
-            <option selected="" disabled="">(# of Vistors)</option>
-            <option>1</option>
-            <option>2</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label>Student</label>
-          <select class="form-control" name="adults">
-            <option selected="" disabled="">(# of Student)</option>
-            <option>1</option>
-            <option>2</option>
-          </select>
-        </div>
-      </div>
-      <div class="row" style="padding: 10px">
-        <div class="col-md-2">
-          <button type="submit" class="form-control btn btn-primary btn-md mt-2">
-            Book Now
-          </button>
-        </div>
-      </div>
-    </div>
-  </form> -->
-  <!-- Rooms and Services -->
-  <!-- TODO Not mobile Responsive -->
+  <!-- Rooms and Gallery -->
   <h2 class="mt-5 text-center">Rooms & Services</h2>
-  <section class="gallery-content">
+  <section class="gallery-content" id="gals">
     <div class="container-services">
       <!-- Card 1 -->
       <div class="cards-c">
@@ -183,7 +124,8 @@
           <img src="{% static  'img/Room1.jpg' %}" alt="">
         </div>
         <h3 class="cloud-plat">Standard Room</h3>
-          <p class="p-cloud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolore nemo qui magni saepe dolores.</p>
+        <p class="p-cloud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolore nemo qui magni
+          saepe dolores.</p>
       </div>
       <!-- Card 2 -->
       <div class="cards-c">
@@ -191,14 +133,16 @@
           <img src="{% static  'img/Room2.jpg' %}" alt="">
         </div>
         <h3 class="cloud-plat">Standard Twin Rooms</h3>
-          <p class="p-cloud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolore nemo qui magni saepe dolores.</p>
+        <p class="p-cloud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolore nemo qui magni
+          saepe dolores.</p>
       </div>
       <!-- Card 3 -->
       <div class="cards-c">
         <div class="img-div-class">
           <img src="{% static  'img/Room3.jpg' %}" alt="">
           <h3 class="cloud-plat">Deluxe Room</h3>
-          <p class="p-cloud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolore nemo qui magni saepe dolores.</p>
+          <p class="p-cloud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolore nemo qui magni
+            saepe dolores.</p>
         </div>
       </div>
     </div>
@@ -246,6 +190,57 @@
       </div>
     </div>
   </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <!-- Contact Details -->
+    <div class="container-contact">
+      <div class="contact-box">
+        <h2>Contact Details</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reprehenderit, tenetur.</p>
+        <div class="social-media">
+          <p>Social Media Site</p>
+          <a class="social-media-link" href="https://github.com" target="_blank"> <i class="fa fa-github-square fa-2x"
+              aria-hidden="true"></i></a>
+          <a class="social-media-link" href="https://facebook.com" target="_blank"> <i
+              class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+          <a class="social-media-link" href="https://google.com" target="_blank"> <i class="fa fa-google fa-2x"
+              aria-hidden="true"></i></a>
+          <a class="social-media-link" href="https://twitter.com" target="_blank"> <i class="fa fa-twitter-square fa-2x"
+              aria-hidden="true" target="_blank"></i></a>
+          <div class="number-group">
+            <p class="number-head">Contact Number</p>
+            <p>09278432078</p>
+          </div>
+          <div class="email-group">
+            <p class="head-p">Email Address</p>
+            <p>cleofastiano27@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Section Form -->
+      <div class="contact-box">
+        <div class="contact-form">
+          <form name="email-form" method="POST" data-netlify="true">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+              <label for="name">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter your Email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Enter your Message"></textarea>
+            </div>
+            <input type="submit" class="btn-contact" value="Send">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footers -->
   <footer class="mt-4 mb-4">
     <div class="text-center">
