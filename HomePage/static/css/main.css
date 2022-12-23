@@ -1,24 +1,13 @@
 :root {
     --first-color: #eaeaea;
     --second-color: #d48b68;
-    --third-color: #a66bbe;
+    --third-color: #a50404;
     --fourth-color: #9a3ebe;
     --fifth-color: #d36efc;
     --other-color: #ec2c2c;
     --light-color: #d97aff;
     --content-color: #333;
     --shadow: 0 1px 5px #ff7e7e;
-    --media: 0 1px 5px #b8b8b8;
-    --first-color: #eaeaea;
-    --second-color: #d48b68;
-    --third-color: #a66bbe;
-    --thirdy-color: #a50404;
-    --fourth-color: #9a3ebe;
-    --fifth-color: #d36efc;
-    --other-color: #680b8d;
-    --light-color: #d97aff;
-    --content-color: #333;
-    --shadow: 0 1px 5px #d36efc;
     --media: 0 1px 5px #b8b8b8;
 }
 .gallery-content{
@@ -57,29 +46,29 @@
 
 /*********************************************************************************/
 
-#contact {
-    background-color: var(--thirdy-color);
-    margin-bottom: -40px;
+#contact{
+    background-color: var(--third-color);
+    margin-bottom: 40px;
 }
 
-#contact .contact-box>h2 {
+#contact .contact-box>h2{
     font-size: 31px;
     margin-left: 30px;
     color: #ffffff;
 }
 
-.container-contact {
+.container-contact{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2rem 1rem;
     padding: 3rem 1.4rem;
 }
 
-.contact-box {
-    background-color: var(--thirdy-color);
+.contact-box{
+    background-color: var(--third-color);
 }
 
-.contact-box>p {
+.contact-box>p{
     color: #fff;
     margin-top: 10px;
     font-size: 18px;
@@ -88,27 +77,21 @@
     margin-bottom: 18px;
 }
 
-.container-contact .contact-box .cthm-contact-form {
+.container-contact .contact-box .contact-form{
     border-radius: 7px;
     margin: 1rem;
     background-color: #fff;
     padding: 2rem;
 }
 
-#contact .contact-form label {
-    margin-bottom: .5rem;
-    display: block;
-    float: left;
-}
-
-#contact .contact-form input, #contact .contact-form textarea {
+#contact .contact-form input, #contact .contact-form textarea{
     margin-bottom: 1rem;
     width: 100%;
     padding: .5rem;
 }
 
-.btn-contact {
-    background-color: var(--thirdy-color);
+.btn-contact{
+    background-color: var(--third-color);
     color: #fff;
     font-size: 1rem;
     margin-top: 1rem;
