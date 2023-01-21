@@ -1,12 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
     <title>Login Form</title>
 </head>
 <body>
-    <h2>Login</h2>
+    <div class="form-container">
+        <form action="" method="post">
+           <h3>CTHM ADMIN LOGIN</h3>
+           <input type="username" name="username" required placeholder="enter your username">
+           <input type="password" name="password" required placeholder="enter your password">
+           <input type="submit" name="submit" value="login now" class="form-btn">
+        </form>
+     </div>
 </body>
 </html>
