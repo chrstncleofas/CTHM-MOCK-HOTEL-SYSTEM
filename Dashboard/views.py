@@ -10,7 +10,7 @@ from HomePage.models import Reservation, Contact
 def main_page(request):
     return render(request, 'Dashboard/index.html')
 
-def login(request):
+def login_page(request):
     if request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
