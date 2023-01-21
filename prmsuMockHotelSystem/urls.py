@@ -22,6 +22,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('HomePage.urls')),
+    path('', include('LoginForm.urls')),
     # path('LoginForm/', include('LoginForm.urls')),
 
     # url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
