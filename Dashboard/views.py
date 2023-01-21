@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def dashboard(request):
+def main_page(request):
     return render(request, 'Dashboard/index.html')
 
 def login(request):
@@ -10,3 +10,6 @@ def login(request):
 
 def register(request):
     return render(request, 'Dashboard/register.html')
+
+def dashboard(request):
+    return render(request, 'Dashboard/dashboard.html')
