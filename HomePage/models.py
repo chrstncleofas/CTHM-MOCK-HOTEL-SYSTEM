@@ -7,11 +7,11 @@ class Reservation(models.Model):
     address = models.CharField(max_length=70)
     city = models.CharField(max_length=70)
     province = models.CharField(max_length=70)
-    postal = models.PositiveBigIntegerField()
+    postal = models.PositiveIntegerField()
     birthday = models.CharField(max_length=50)
     gender = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
-    phone = models.PositiveBigIntegerField()
+    phone = models.PositiveIntegerField
 
     def __str__(self):
         return f'Reservation: {self.fname} {self.lname}'
