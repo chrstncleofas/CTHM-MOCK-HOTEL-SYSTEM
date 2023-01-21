@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <title>Welcome to Our CTHM Management System</title>
   <link rel="stylesheet" href="{% static 'css/dashboards.css' %}">
-  <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+  <!-- <link rel="stylesheet" href="{% static 'css/dashboards.css' %}"> -->
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
@@ -51,35 +51,34 @@
 
       <div class="history_lists">
         <div class="list1">
-          <div class="row">
-            <h4>History</h4>
-            <a href="#">See all</a>
-          </div>
-          {% if reservation %}
-          <table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Dates</th>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
+              <div class="row">
+                  <h4>History</h4>
+                  <a href="#">See all</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            {% if reservation %}
             <tbody>
+              {% for item in reservation %}
               <tr>
-                <td>1</td>
-                <td>2, Aug, 2022</td>
-                <td>Cleofas Christian</td>
-                <td>Single Room</td>
-                <td>PHP 7, 000</td>
+                <td>{{ item.lname }}</td>
+                <td>{{ item.address }}</td>
+                <td>{{ item.phone }}</td>
+                <td>{{ item.email }}</td>
               </tr>
+              {% endfor %}
             </tbody>
+            {% endif %}
           </table>
-          {% else %}
-
-          {% endif %} 
-        </div>
+    </div>
 
         <div class="list2">
           <div class="row">
