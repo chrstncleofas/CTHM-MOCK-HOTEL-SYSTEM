@@ -18,7 +18,10 @@ body{
   justify-content: space-between;
   height: 60px;
   padding: 20px;
-  background: #fff;
+  background: rgb(136, 7, 7);
+}
+.header .logo > a {
+  color: #fff;
 }
 .logo{
   display: flex;
@@ -44,10 +47,13 @@ body{
 .search_box i{
   padding: 0.66rem;
   cursor: pointer;
-  color: #fff;
-  background: #000;
+  color: maroon;
+  background: #fff;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.header-icons h4{
+  color: #fff;
 }
 .header-icons{
   display: flex;
@@ -56,6 +62,7 @@ body{
 .header-icons i{
   margin-right: 2rem;
   cursor: pointer;
+  color: #fff;
 }
 .header-icons .account{
   width: 130px;
@@ -122,7 +129,7 @@ nav{
   margin-top: 10px;
   border-radius: 8px;
   padding: 0.5rem 1rem 1rem 3rem;
-  background: rgb(37, 37, 37);
+  background: maroon;
 }
 .promo_card h1, .promo_card span, button{
   margin: 10px;
