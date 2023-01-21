@@ -1,12 +1,20 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from .models import Reservation
+from .models import Reservation, Contact
 from .forms import Reservation_Form
 from django.urls import reverse
 
 # Create your views here.
 
 def home(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        contacts = Contact.objects.create(name, email, message)
+
+        contacts.save()
     return render(request, 'HomePage/home.html')
 
 def login(request):
