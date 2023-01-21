@@ -12,7 +12,11 @@ def home(request):
         email = request.POST.get('email')
         message = request.POST.get('message')
 
-        contacts = Contact.objects.create(name, email, message)
+        contacts = Contact.objects.create()
+
+        contacts.name = name
+        contacts.email = email
+        contacts.message = message
 
         contacts.save()
     return render(request, 'HomePage/home.html')
