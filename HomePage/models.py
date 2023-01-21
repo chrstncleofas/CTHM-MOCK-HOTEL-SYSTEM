@@ -11,7 +11,7 @@ class Reservation(models.Model):
     birthday = models.CharField(max_length=50)
     gender = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
-    phone = models.PositiveIntegerField
+    phone = models.PositiveIntegerField()
 
     def __str__(self):
         return f'Reservation: {self.fname} {self.lname}'
