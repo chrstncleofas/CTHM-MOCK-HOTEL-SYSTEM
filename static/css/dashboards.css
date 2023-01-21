@@ -112,8 +112,8 @@ nav{
   font-size: 13px;
 }
 .side_navbar a:hover{
-  background: maroon;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: maroon !important;
 }
 .side_navbar .active{
   border-left: 2px solid rgb(100, 100, 100);
@@ -175,10 +175,11 @@ table td{
 .sidebar{
   width: 15%;
   padding: 2rem 1rem;
-  background: #fff;
+  background-color: maroon;
 }
 .sidebar h4{
   margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 .sidebar .balance{
   display: flex;
@@ -186,19 +187,19 @@ table td{
   margin-bottom: 1rem;
 }
 .balance .icon{
-  color: #fff;
+  color: maroon;
   font-size: 20px;
   border-radius: 6px;
   margin-right: 1rem;
   padding: 1rem;
-  background: rgb(37, 37, 37);
+  background: #ffffff;
 }
 .balance .info h5{
   font-size: 16px;
 }
 .balance .info span{
   font-size: 14px;
-  color: rgb(100, 100, 100);
+  color: maroon;
 }
 .balance .info i{
   margin-right: 2px;
