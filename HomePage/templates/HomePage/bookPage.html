@@ -97,11 +97,10 @@
                     <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Reservation Form</h3>
-                            <form>
-
+                            <!-- Form Action -->
+                            <form action="{% bookPage %}" method="POST">
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
-
                                         <!-- First Name -->
                                         <div class="form-outline">
                                             <input type="text" id="fname" name="fname" class="form-control form-control-lg">
@@ -113,10 +112,8 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-4">
-
                                         <!-- Last Name -->
                                         <div class="form-outline">
                                             <input type="text" id="lname" name="lname" class="form-control form-control-lg">
@@ -128,10 +125,8 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-12 mb-4">
-
                                         <!-- Address -->
                                         <div class="form-outline">
                                             <input type="text" id="address" name="address" class="form-control form-control-lg">
@@ -143,10 +138,8 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-4">
-
                                         <!-- City -->
                                         <div class="form-outline">
                                             <input type="text" id="city" name="city" class="form-control form-control-lg">
@@ -158,10 +151,8 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-4">
-
                                         <!-- Province -->
                                         <div class="form-outline">
                                             <input type="text" id="province" name="province" class="form-control form-control-lg">
@@ -173,10 +164,8 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-4">
-
                                         <!-- Zipcode -->
                                         <div class="form-outline">
                                             <input type="text" id="postal" name="postal" class="form-control form-control-lg">
@@ -188,13 +177,10 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-md-6 mb-4 d-flex align-items-center">
-
                                         <!-- Birthday -->
                                         <div class="form-outline datepicker w-100">
                                             <input type="text" id="birthday" name="birthday" class="form-control form-control-lg" id="birthdayDate">
@@ -206,37 +192,29 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-4">
-
                                         <h6 class="mb-2 pb-1">Gender: </h6>
-
                                         <!-- Gender -->
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="femaleGender" value="option1" checked="">
                                             <label class="form-check-label" for="femaleGender">Female</label>
                                         </div>
-
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="maleGender" value="option2">
                                             <label class="form-check-label" for="maleGender">Male</label>
                                         </div>
-
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="otherGender" value="option3">
                                             <label class="form-check-label" for="otherGender">Other</label>
                                         </div>
-
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-md-6 mb-4 pb-2">
-
                                         <!-- Email -->
                                         <div class="form-outline">
                                             <input type="email" id="email" name="email" class="form-control form-control-lg">
@@ -248,10 +226,8 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-4 pb-2">
-
                                         <!-- Phone -->
                                         <div class="form-outline">
                                             <input type="tel" id="phone" name="phone" class="form-control form-control-lg">
@@ -263,13 +239,10 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-12">
-
                                         <div id="select-wrapper-771349" class="select-wrapper">
                                             <div class="form-outline"><input class="form-control select-input active"
                                                     type="text" role="listbox" aria-multiselectable="false"
@@ -296,7 +269,7 @@
                                     <input class="btn btn-primary btn-lg" type="submit" value="Submit"
                                         style="background-color: maroon !important;">
                                 </div>
-                            </form>
+                            </form> <!-- End Form Action -->
                         </div>
                     </div>
                 </div>
