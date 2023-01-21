@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from HomePage.models import Reservation
 
 # Create your views here.
 
