@@ -55,10 +55,14 @@ def bookPage(request):
 
             new_reservation.save()
 
-    return render(request, 'HomePage/bookPage.html',{
-        'form': Reservation_Form(),
-        'success': True
-    })
+            return render(request, 'HomePage/bookPage.html',{
+                'form': Reservation_Form(),
+                'success': True
+            })
+    else:
+        return render(request, 'HomePage/bookPage.html',{
+            'form': Reservation_Form(),
+        })
 
 
 def contact(request):
