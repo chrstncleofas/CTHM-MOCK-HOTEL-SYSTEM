@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from HomePage.models import Reservation, Contact
 
@@ -56,3 +56,8 @@ def dashboard(request):
         'reservation': Reservation.objects.all(),
         'contact': Contact.objects.all(),
     })
+
+def signout(request):
+    logout(request)
+    messages.success(request, "Logged Out Successfully!!")
+    return redirect('main_page')

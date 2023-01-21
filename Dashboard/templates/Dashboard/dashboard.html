@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
 <body>
+  {% if user.is_authenticated %}
   <header class="header">
     <div class="logo">
       <a href="#">CTHM Management System</a>
@@ -23,8 +24,11 @@
     <div class="header-icons">
       <i class="fas fa-bell"></i>
       <div class="account">
-        <!-- <img src="" alt=""> -->
-        <h4>Sign Out</h4>
+        <form action="signout" method="POST">
+          {% csrf_token %}
+          <!-- <img src="" alt=""> -->
+          <a href=""><h4>Sign Out</h4></a>
+        </form>
       </div>
     </div>
   </header>
@@ -146,5 +150,6 @@
 
     </div>
   </div>
+  {% endif %}
 </body>
 </html>
