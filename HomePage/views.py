@@ -7,7 +7,9 @@ from django.urls import reverse
 # Create your views here.
 
 def home(request):
+
     if request.method == 'POST':
+
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
@@ -19,6 +21,7 @@ def home(request):
         contacts.message = message
 
         contacts.save()
+
     return render(request, 'HomePage/home.html')
 
 def login(request):
