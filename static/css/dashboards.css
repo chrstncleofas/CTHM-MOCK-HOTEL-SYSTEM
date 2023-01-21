@@ -92,7 +92,7 @@ nav{
   flex-direction: column;
 }
 .side_navbar span{
-  color: gray;
+  color: #fff;
   margin: 1rem 3rem;
   font-size: 12px;
 }
@@ -112,7 +112,8 @@ nav{
   font-size: 13px;
 }
 .side_navbar a:hover{
-  background: rgb(235, 235, 235);
+  background: maroon;
+  color: #ffffff;
 }
 .side_navbar .active{
   border-left: 2px solid rgb(100, 100, 100);
