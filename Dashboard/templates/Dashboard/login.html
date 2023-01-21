@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="" method="post">
+        <form action="/login" method="POST">
+        {% csrf_token %}
            <h3>CTHM ADMIN LOGIN</h3>
            <input type="username" name="username" required placeholder="enter your username">
            <input type="password" name="password" required placeholder="enter your password">
