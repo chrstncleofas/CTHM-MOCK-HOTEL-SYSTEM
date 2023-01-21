@@ -52,7 +52,7 @@
       <div class="history_lists">
         <div class="list1">
               <div class="row">
-                  <h4>History</h4>
+                  <h4>History Reservation</h4>
                   <a href="#">See all</a>
             </div>
             <table>
@@ -82,24 +82,28 @@
 
         <div class="list2">
           <div class="row">
-            <h4>Room Available</h4>
+            <h4>List Message</h4>
             <a href="#">See all</a>
           </div>
           <table>
             <thead>
               <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Type</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
               </tr>
             </thead>
+            {% if contact %}
             <tbody>
+            {% for item in contact %}
               <tr>
-                <td>1</td>
-                <td>2nd Floor</td>
-                <td>Single Bed</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ item.message }}</td>
               </tr>
+            {% endfor %}
             </tbody>
+            {% endif %}
           </table>
         </div>
       </div>

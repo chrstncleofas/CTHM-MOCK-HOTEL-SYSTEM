@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from HomePage.models import Reservation
+from HomePage.models import Reservation, Contact
 
 # Create your views here.
 
@@ -15,4 +15,5 @@ def register(request):
 def dashboard(request):
     return render(request, 'Dashboard/dashboard.html', {
         'reservation': Reservation.objects.all(),
+        'contact': Contact.objects.all(),
     })
