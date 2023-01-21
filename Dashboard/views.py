@@ -47,7 +47,7 @@ def register(request):
         myuser.save()
         messages.success(request, "Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
 
-        return redirect('login')
+        return redirect('login_page')
 
     return render(request, 'Dashboard/register.html')
 
