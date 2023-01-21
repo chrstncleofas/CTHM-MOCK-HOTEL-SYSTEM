@@ -27,7 +27,7 @@ def login(request):
             return redirect('dashboard')
         else:
             messages.error(request, "Bad Credentials!!")
-            return redirect('home')
+            return redirect('main_page')
 
     return render(request, 'Dashboard/login.html')
 
