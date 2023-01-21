@@ -112,10 +112,10 @@
     }
     .button a {
         padding: 7.5px 15px;
-        background: #fff;
+        background: maroon;
         border: 1px maroon;
         border-radius:50em;
-        color: maroon;
+        color: #fff;
     }
     .button.secondary a {
         background: transparent;    
@@ -130,7 +130,7 @@
         color: maroon;
     }
     .button.secondary a:hover {
-        color: #ddd;
+        color: #fff;
     } 
   }
   
