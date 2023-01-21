@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <title>Welcome to Our CTHM Management System</title>
   <link rel="stylesheet" href="{% static 'css/dashboards.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
@@ -54,6 +55,7 @@
             <h4>History</h4>
             <a href="#">See all</a>
           </div>
+          {% if reservation %}
           <table>
             <thead>
               <tr>
@@ -74,6 +76,9 @@
               </tr>
             </tbody>
           </table>
+          {% else %}
+
+          {% endif %} 
         </div>
 
         <div class="list2">

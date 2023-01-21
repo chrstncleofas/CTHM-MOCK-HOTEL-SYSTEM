@@ -4,7 +4,9 @@ from HomePage.models import Reservation
 # Create your views here.
 
 def main_page(request):
-    return render(request, 'Dashboard/index.html')
+    return render(request, 'Dashboard/index.html',{
+        'reservation': Reservation.objects.all(),
+    })
 
 def login(request):
     return render(request, 'Dashboard/login.html')
