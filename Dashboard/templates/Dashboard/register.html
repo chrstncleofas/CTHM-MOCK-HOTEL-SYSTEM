@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="form-container">
-      {% csrf_token %}
-        <form action="/register/" method="POST">
+       <form action="/register" method="POST">
+           {% csrf_token %}
            <h3>register now</h3>
            <input type="text" id="fname" name="fname" required placeholder="enter your first name">
            <input type="text" id="lname" name="lname" required placeholder="enter your last name">

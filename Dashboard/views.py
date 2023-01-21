@@ -11,7 +11,6 @@ def main_page(request):
     return render(request, 'Dashboard/index.html')
 
 def login(request):
-
     if request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
@@ -24,7 +23,7 @@ def login(request):
             messages.success(request, "Logged In Sucessfully!!")
             # return render(request, 'authentication/dashboard.html')
             # return render(request, "authentication/dashboard.html",{"fname":fname})
-            return redirect('dashboard')
+            return redirect('dashboard/')
         else:
             messages.error(request, "Bad Credentials!!")
             return redirect('main_page')
