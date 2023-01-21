@@ -53,7 +53,12 @@ def bookPage(request):
                 phone = new_phone,
             )
 
-    return render(request, 'HomePage/bookPage.html')
+            new_reservation.save()
+
+    return render(request, 'HomePage/bookPage.html',{
+        'form': Reservation_Form(),
+        'success': True
+    })
 
 
 def contact(request):
