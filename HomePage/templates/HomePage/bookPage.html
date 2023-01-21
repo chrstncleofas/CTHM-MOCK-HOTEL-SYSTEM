@@ -72,6 +72,12 @@
         </div>
     </header>
     <!-- Form -->
+    {% if success %}
+        <div class="alert alert-success" role="alert">
+            Reservation Successfuly
+            <a href="{% url 'home' %}" class="alert-link">Go to Home Page</a>
+        </div>
+    {% else %}
     <div class="bg-white rounded-5 container mt-4">
         <section class="w-100 px-4 py-5 gradient-custom" style="border-radius: .5rem .5rem 0 0;">
             <style>
@@ -297,6 +303,7 @@
             </div>
         </section>
     </div>
+    {% endif %}
     <!--  -->
     <footer class="mt-4 mb-4">
         <div class="text-center">
