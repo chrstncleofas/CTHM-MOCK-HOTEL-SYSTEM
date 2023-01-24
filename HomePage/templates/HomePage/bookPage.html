@@ -33,9 +33,8 @@
         @keyframes onautofillcancel {}
     </style>
     <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=G-E9PS2EVWYS&amp;l=dataLayer&amp;cx=c"></script>
-
-
+        src="https://www.googletagmanager.com/gtag/js?id=G-E9PS2EVWYS&amp;l=dataLayer&amp;cx=c">
+    </script>
     <title>Book and Reservation</title>
 </head>
 
@@ -91,10 +90,10 @@
                                 {% csrf_token %}
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
+                                        <label class="form-label" for="fname" style="margin-left: 0px">First Name</label>
                                         <!-- First Name -->
                                         <div class="form-outline">
                                             <input type="text" id="fname" name="fname" class="form-control form-control-lg" />
-                                            <label class="form-label" for="firstName" style="margin-left: 0px">First Name</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 70.4px"></div>
@@ -104,9 +103,9 @@
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <!-- Last Name -->
+                                        <label class="form-label" for="lname" style="margin-left: 0px">Last Name</label>
                                         <div class="form-outline">
                                             <input type="text" id="lname" name="lname" class="form-control form-control-lg" />
-                                            <label class="form-label" for="lastName" style="margin-left: 0px">Last Name</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 69.6px"></div>
@@ -116,9 +115,9 @@
                                     </div>
                                     <div class="col-md-12 mb-4">
                                         <!-- Address -->
+                                        <label class="form-label" for="address" style="margin-left: 0px">Address</label>
                                         <div class="form-outline">
                                             <input type="text" id="address" name="address" class="form-control form-control-lg" />
-                                            <label class="form-label" for="lastName" style="margin-left: 0px">Address</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 69.6px"></div>
@@ -128,9 +127,9 @@
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <!-- City -->
+                                        <label class="form-label" for="city" style="margin-left: 0px">City</label>
                                         <div class="form-outline">
                                             <input type="text" id="city" name="city" class="form-control form-control-lg" />
-                                            <label class="form-label" for="firstName" style="margin-left: 0px">City</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 70.4px"></div>
@@ -140,9 +139,9 @@
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <!-- Province -->
+                                        <label class="form-label" for="province" style="margin-left: 0px">Province</label>
                                         <div class="form-outline">
                                             <input type="text" id="province" name="province" class="form-control form-control-lg" />
-                                            <label class="form-label" for="lastName" style="margin-left: 0px">Province</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 69.6px"></div>
@@ -152,9 +151,9 @@
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <!-- Zipcode -->
+                                        <label class="form-label" for="postal" style="margin-left: 0px">Postal / Zip code</label>
                                         <div class="form-outline">
                                             <input type="text" id="postal" name="postal" class="form-control form-control-lg" />
-                                            <label class="form-label" for="lastName" style="margin-left: 0px">Postal / Zip code</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 69.6px"></div>
@@ -166,9 +165,9 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4 pb-2">
                                         <!-- Email -->
+                                        <label class="form-label" for="email" style="margin-left: 0px">Email</label>
                                         <div class="form-outline">
                                             <input type="email" id="email" name="email" class="form-control form-control-lg" />
-                                            <label class="form-label" for="emailAddress" style="margin-left: 0px">Email</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 40px"></div>
@@ -178,9 +177,9 @@
                                     </div>
                                     <div class="col-md-6 mb-4 pb-2">
                                         <!-- Phone -->
+                                        <label class="form-label" for="phoner" style="margin-left: 0px">Phone Number</label>
                                         <div class="form-outline">
                                             <input type="tel" id="phone" name="phone" class="form-control form-control-lg" />
-                                            <label class="form-label" for="phoneNumber" style="margin-left: 0px">Phone Number</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 92.8px"></div>
@@ -248,9 +247,9 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4 pb-2">
                                         <!-- Number of Person -->
+                                        <label class="form-label" for="number_person" style="margin-left: 0px">Number of Person</label>
                                         <div class="form-outline">
                                             <input type="text" id="number_person" name="number_person" class="form-control form-control-lg" />
-                                            <label class="form-label" for="" style="margin-left: 0px">Number of Person</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 40px"></div>
@@ -262,10 +261,10 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4 pb-2">
                                         <!-- Number of Person -->
+                                        <label class="form-label" for="message" style="margin-left: 0px">Message</label>
                                         <div class="form-outline">
                                             <!-- <input type="message" id="number_person" name="number_person" class="form-control form-control-lg" /> -->
                                             <textarea name="message" id="message" rows="5"  class="form-control form-control-lg"></textarea>
-                                            <label class="form-label" for="" style="margin-left: 0px">Message</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px"></div>
                                                 <div class="form-notch-middle" style="width: 40px"></div>
