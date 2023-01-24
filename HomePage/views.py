@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .models import Reservation, Contact
-from .forms import Reservation_Form
+# from .forms import Reservation_Form
 from django.urls import reverse
 
 # Create your views here.
@@ -41,42 +41,51 @@ def addroom(request):
 
 def bookPage(request):
     if request.method == 'POST':
-        form = Reservation_Form(request.POST)
-        if form.is_valid():
+        # name = request.POST.get('name')
+        new_fname = request.POST.get('fname')
+        new_lname = request.POST.get('lname')
+        new_address = request.POST.get('address')
+        new_city = request.POST.get('city')
+        new_province = request.POST.get('province')
+        new_postal = request.POST.get('postal')
+        new_email = request.POST.get('email')
+        new_phone = request.POST.get('phone')
+        arrival_date = request.POST.get('arrival_date')
+        arrival_time = request.POST.get('arrival_time')
+        departure_date = request.POST.get('departure_date')
+        departure_time = request.POST.get('departure_time')
+        number_person = request.POST.get('number_person')
+        message = request.POST.get('message')
 
-            new_fname = form.cleaned_data['fname']
-            new_lname = form.cleaned_data['lname']
-            new_address = form.cleaned_data['address']
-            new_city = form.cleaned_data['city']
-            new_province = form.cleaned_data['province']
-            new_postal = form.cleaned_data['postal']
-            new_birthday = form.cleaned_data['birthday']
-            new_gender = form.cleaned_data['gender']
-            new_email = form.cleaned_data['email']
-            new_phone = form.cleaned_data['phone']
+        reservation = Reservation.objects.create()
 
-            new_reservation = Reservation(
-                fname = new_fname,
-                lname = new_lname,
-                address = new_address,
-                city = new_city,
-                province = new_province,
-                postal = new_postal,
-                birthday = new_birthday,
-                gender = new_gender,
-                email = new_email,
-                phone = new_phone,
-            )
+        # resident.name = name
 
-            new_reservation.save()
+        reservation.fname = new_fname
+        reservation.lname = new_lname
+        reservation.address = new_address
+        reservation.city = new_city
+        reservation.province = new_province
+        reservation.postal = new_postal
+        reservation.email = new_email
+        reservation.phone = new_phone
+        reservation.arrival_date = arrival_date
+        reservation.arrival_time = arrival_time
+        reservation.departure_date = departure_date
+        reservation.departure_time = departure_time
+        reservation.number_person = number_person
+        reservation.message = message
 
-            return render(request, 'HomePage/bookPage.html',{
-                'form': Reservation_Form(),
-                'success': True
-            })
+        reservation.save()
+
+
+        return render(request, 'HomePage/bookPage.html',{
+            'form': Reservation(),
+            'success': True
+        })
     else:
         return render(request, 'HomePage/bookPage.html',{
-            'form': Reservation_Form(),
+            'form': Reservation(),
         })
 
 
