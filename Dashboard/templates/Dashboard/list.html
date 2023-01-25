@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Our CTHM Management System</title>
+    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/dashboards.css' %}"> -->
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <header class="header">
+        <div class="logo">
+            <a href="#">CTHM Management System</a>
+            <div class="search_box">
+                <input type="text" placeholder="Search......">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+
+        <div class="header-icons">
+            <i class="fas fa-bell"></i>
+            <div class="account">
+                <form action="signout" method="POST">
+                    {% csrf_token %}
+                    <!-- <img src="" alt=""> -->
+                    <a href="">
+                        <h4>Sign Out</h4>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav style="background-color: maroon;">
+            <div class="side_navbar" style="color: #ffff;">
+                <span style="color: #fff;">Main Menu</span>
+                <a style="color: #ffff;" href="{% url 'dashboard' %}" class="active">Dashboard</a>
+                <a style="color: #ffff;" href="{% url 'list' %}">List of Reservation</a>
+                <a style="color: #ffff;" href="#">History</a>
+                <a style="color: #ffff;" href="#">Available Room</a>
+                <a style="color: #ffff;" href="#">Documnets</a>
+
+            </div>
+        </nav>
+        <div class="main-body">
+            <h2>List of Book Reservation</h2>
+            <div class="history_lists">
+                <div class="list1">
+                    <div class="row">
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Arrival</th>
+                                <th>Time</th>
+                                <th>Departure</th>
+                                <th>Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        {% if reservation %}
+                        <tbody>
+                            {% for item in reservation %}
+                            <tr>
+                                <td>{{ item.fname }}</td>
+                                <td>{{ item.lname }}</td>
+                                <td>{{ item.arrival_date }}</td>
+                                <td>{{ item.arrival_time }}</td>
+                                <td>{{ item.departure_date }}</td>
+                                <td>{{ item.departure_time }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary me-1" href="" data-bs-toggle="" data-bs-target="">
+                                        <i class="fa-solid fa-circle-info fa-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        {% endif %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</body>
+
+</html>

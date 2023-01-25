@@ -36,8 +36,8 @@
     <nav style="background-color: maroon;">
       <div class="side_navbar" style="color: #ffff;">
         <span style="color: #fff;">Main Menu</span>
-        <a style="color: #ffff;" href="#" class="active">Dashboard</a>
-        <a style="color: #ffff;" href="#">List of Reservation</a>
+        <a style="color: #ffff;" href="{% url 'dashboard' %}" class="active">Dashboard</a>
+        <a style="color: #ffff;" href="{% url 'list' %}">List of Reservation</a>
         <a style="color: #ffff;" href="#">History</a>
         <a style="color: #ffff;" href="#">Available Room</a>
         <a style="color: #ffff;" href="#">Documnets</a>
@@ -60,27 +60,31 @@
                   <a href="#">See all</a>
             </div>
             <table>
-                <thead>
-                    <tr>
-                        <th>Last Name</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-            {% if reservation %}
-            <tbody>
-              {% for item in reservation %}
-              <tr>
-                <td>{{ item.lname }}</td>
-                <td>{{ item.address }}</td>
-                <td>{{ item.phone }}</td>
-                <td>{{ item.email }}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-            {% endif %}
+              <thead>
+                  <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Arrival</th>
+                      <th>Time</th>
+                      <th>Departure</th>
+                      <th>Time</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              {% if reservation %}
+              <tbody>
+                  {% for item in reservation %}
+                  <tr>
+                      <td>{{ item.fname }}</td>
+                      <td>{{ item.lname }}</td>
+                      <td>{{ item.arrival_date }}</td>
+                      <td>{{ item.arrival_time }}</td>
+                      <td>{{ item.departure_date }}</td>
+                      <td>{{ item.departure_time }}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+              {% endif %}
           </table>
     </div>
 

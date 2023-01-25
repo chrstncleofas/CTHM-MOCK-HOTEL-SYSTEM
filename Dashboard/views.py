@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from HomePage.models import Reservation, Contact
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 
@@ -61,3 +63,13 @@ def signout(request):
     logout(request)
     messages.success(request, "Logged Out Successfully!!")
     return redirect('main_page')
+
+
+def list(request):
+    return render(request, 'Dashboard/list.html', {
+        'reservation' : Reservation.objects.all(),
+    })
+
+def list_item(request, id):
+    reservation = Reservation.objects.get(pk=id)
+    return HttpResponseRedirect(reverse('list'))
