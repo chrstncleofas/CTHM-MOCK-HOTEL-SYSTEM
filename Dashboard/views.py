@@ -87,3 +87,6 @@ def edit_list(request, id):
     else:
         reservation = Reservation.objects.get(pk=id)
         form = Reservation(instance=reservation)
+    return render(request, 'Dashboard/edit.html',{
+        'form': form,
+    })
