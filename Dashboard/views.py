@@ -71,5 +71,19 @@ def list(request):
     })
 
 def list_item(request, id):
-    reservation = Reservation.objects.get(pk=id)
+    reservations = Reservation.objects.get(pk=id)
     return HttpResponseRedirect(reverse('list'))
+
+def edit_list(request, id):
+    if request.method == 'POST':
+        reservation = Reservation.objects.get(pk=id)
+        form = Reservation(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            return render(request, 'Dashboard/edit.html', {
+                'form': form,
+                'success': True,
+            })
+    else:
+        reservation = Reservation.objects.get(pk=id)
+        form = Reservation(instance=reservation)
