@@ -90,3 +90,9 @@ def edit_list(request, id):
     return render(request, 'Dashboard/edit.html',{
         'form': form,
     })
+
+def delete_list(request, id):
+    if request.method == 'POST':
+        reservation = Reservation.objects.get(pk=id)
+        reservation.delete()
+    return HttpResponseRedirect(reverse('list'))

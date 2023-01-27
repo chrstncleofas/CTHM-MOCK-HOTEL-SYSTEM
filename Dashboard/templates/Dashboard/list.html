@@ -122,9 +122,32 @@
                                     </button>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger" href="" data-bs-toggle="" data-bs-target="">
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{item.id}}">
                                         <i class="fa-solid fa-trash fa-lg"></i>
                                     </button>
+                                    <!-- Modal -->
+                                    <div class="modal" id="delete{{item.id}}" tabindex="-1" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title">Reservation : {{ item.fname }}</h5>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true"></span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Are you sure do want to delete this record?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="{% url 'delete_list' item.id %}" method="POST">
+                                                    {% csrf_token %}
+                                                    <input type="submit" class="btn btn-primary" value="Delete">
+                                                </form>
+                                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             {% endfor %}
