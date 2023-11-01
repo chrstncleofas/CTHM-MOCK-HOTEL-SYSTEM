@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# I-customize ang mensahe ng commit gamit ang unang argumento
+commit_message="$1"
+
+# I-customize ang local branch name gamit ang pangalawang argumento
+local_branch="$2"
+
+if [ -z "$commit_message" ] || [ -z "$local_branch" ]; then
+    echo "Usage: ./custom-git-push.sh <commit_message> <local_branch>"
+    exit 1
+fi
+
+# Git commands para sa add, commit, at push
+git add .
+git commit -m "$commit_message"
+git push --set-upstream origin "$local_branch" -f
