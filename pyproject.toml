@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cthm-mock-hotel-system"
+version = "0.1.0"
+description = ""
+authors = ["Christian Cleofas <cleofastiano27@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
