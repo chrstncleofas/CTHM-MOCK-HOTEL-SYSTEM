@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# I-execute ang mga Git commands
+git switch master
+git fetch -p
+git pull
